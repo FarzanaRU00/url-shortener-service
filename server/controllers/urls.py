@@ -34,6 +34,6 @@ def destroy(req, id):
 
 def find_by_id(id):
     try:
-        return next(u for u in urls if url['id'] == id)
+        return next(url for url in urls if url['id'] == id)
     except:
         raise BadRequest(f"We don't have a chocolate with id {id}!")
