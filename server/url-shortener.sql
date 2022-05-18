@@ -5,8 +5,7 @@ DROP TABLE IF EXISTS urlshortener
 CREATE TABLE urlshortener (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    original_url TEXT NOT NULL,
-    clicks INTEGER NOT NULL DEFAULT 0
+    original_url TEXT NOT NULL
 )
 
 -- id: The ID of the URL, this will be a unique integer value for each URL entry. You will use it to get the original URL from a hash string.
