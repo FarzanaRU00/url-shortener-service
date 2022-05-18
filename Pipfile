@@ -9,6 +9,8 @@ flask-cors = "*"
 werkzeug = "*"
 gunicorn = "*"
 hashids = "*"
+flask-hashids = "*"
+bcrypt = "*"
 
 [dev-packages]
 
