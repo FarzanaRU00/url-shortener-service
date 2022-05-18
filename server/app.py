@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import sqlite3
 from werkzeug import exceptions
-from hashids import Hashids
 from controllers import urls
 
 # Hashids is a small open-source library that generates short, unique, non-sequential ids from numbers. It converts numbers like 347 into strings like “yr8”
@@ -10,9 +9,6 @@ from controllers import urls
 
 app = Flask(__name__)
 CORS(app)
-app.config['SECRET_KEY'] = 'your secret key'
-
-hashids = Hashids(min_length=4, salt=app.config['SECRET_KEY'])
 
 def get_db_connection():
     conn = sqlite3.connect('database.db')
@@ -21,7 +17,7 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return jsonify({'message': 'Welcome to the URL shortener app'}), 200
+    return jsonify({'message': 'Welcome to the URL shortener app'})
 
 @app.route('/urls', methods=['GET', 'POST'])
 def urls_handler():

@@ -1,12 +1,12 @@
 -- database model 
 
-DROP TABLE IF EXISTS urlshortener
+DROP TABLE IF EXISTS urls;
 
-CREATE TABLE urlshortener (
+CREATE TABLE urls (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    original_url TEXT NOT NULL
-)
+    original_url VARCHAR NOT NULL,
+    shortened_url VARCHAR NOT NULL
+);
 
 -- id: The ID of the URL, this will be a unique integer value for each URL entry. You will use it to get the original URL from a hash string.
 -- created: The date the URL was shortened.

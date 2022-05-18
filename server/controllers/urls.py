@@ -20,12 +20,12 @@ def show_by_id(req, id):
     return find_by_id(id), 200
 
 def update(req, id):
-    chocolate = find_by_id(id)
+    url = find_by_id(id)
     data = req.get_json()
     print(data)
     for key, val in data.items():
-        chocolate[key] =  val.lower()
-    return chocolate, 200
+        url[key] =  val.lower()
+    return url, 200
 
 def destroy(req, id):
     url = find_by_id(id)

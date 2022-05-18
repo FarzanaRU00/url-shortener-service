@@ -2,8 +2,10 @@ import sqlite3
 
 connection = sqlite3.connect('database.db')
 
-with open('schema.sql') as f:
+with open('url-shortner.sql') as f:
     connection.executescript(f.read())
+
+cur = connection.cursor()
 
 connection.commit()
 connection.close()
