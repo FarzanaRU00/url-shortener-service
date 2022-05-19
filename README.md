@@ -18,13 +18,16 @@
 
 ### app.py
 
-[x] Fixed filepath to correctly connect CSS to HTML file.
+[x] Set up a flask backend
+[x] Created error handler functions
+[x] Set up the database using SQLite and connected it to our server
 
-### url-shortener.db
+### url-shortener.sql
 
-[x] Updated `fizzbuzz` funtion to accept an arguement.
+[x] Set up the database table
 
 ### init_db.py
+[x] initialised our database
 
 ## Bugs
 
